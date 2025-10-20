@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lahore Library Locator</title>
+    <link rel="icon" type="image/png" href="boy.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Lahore Library Locator</h1>
+      </div>
+      <div class="map" id="map"></div>
+      <div class="detailbar">
+        <h3>Library Details</h3>
+        <p>
+          Click on any <b>library marker</b> on the map to view its details,
+          ratings, and book recommendations.
+        </p>
+        <p>⭐ You can also rate libraries once their details appear here.</p>
+      </div>
+      <div class="sidebar">
+        <h3>Library Tools</h3>
+        <input id="search" type="text" placeholder="Search Library or Area" />
+        <select id="filter">
+          <option value="all">All Types</option>
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+          <option value="university">Academic</option>
+        </select>
+        <button onclick="locateMe()">Find Nearest</button>
+        <button onclick="changeMap()">Change Map Style</button>
+        <label> Founded Before: <span id="yearVal">2025</span> </label>
+        <input
+          id="timeline"
+          type="range"
+          min="1900"
+          max="2025"
+          value="2025"
+          oninput="filterByYear(this.value)"
+        />
+        <button onclick="toggleEvents()">Show Events</button>
+        <button onclick="showRecommendations()">Book Recommendations</button>
+      </div>
+      <div class="footer">
+        <p>
+          BY|GROUP 02<br />"Libraries store the energy that fuels the
+          imagination"
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
