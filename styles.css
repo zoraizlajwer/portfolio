@@ -1,7 +1,7 @@
 /*  General Layout */
 .container {
   display: grid;
-  height: 89vh;
+  height: 98vh;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   background-color: #f4f8fb;
@@ -147,3 +147,4 @@ label {
   align-items: center;
   justify-content: center;
 }
+
